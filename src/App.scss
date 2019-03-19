@@ -1,0 +1,307 @@
+@import './assets/css/style.scss';
+@import './assets/css/variables.scss';
+@import './assets/css/fonts.scss';
+@import 'loaders.css/src/animations/line-scale.scss';
+
+$primary-color: $primary__dark__blue;
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  display: block;
+}
+
+body{
+  background: #f2f2f2;
+  height: 100%;
+  max-height: 100%;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-header-navigation{
+  margin-bottom:0;
+  background: -webkit-linear-gradient(top, #3d3d3da6 0%, #e5e5e500 100%);
+  border: none;
+}
+.App-menu li{
+  padding:10px 3px;
+}
+.App-link {
+  color: #61dafb;
+}
+
+.App .navbar{
+  border-radius:0;
+}
+
+.App-footer{
+  background:#333;
+  padding:20px 0;
+}
+
+.App-footer-left{
+  text-align: left;
+}
+
+.App-copyright{
+  text-align:right;
+  color:#fff;
+  margin-top:10px;
+}
+.App-grid{
+  padding:0;
+}
+.App-grid li{
+  list-style:none;
+  text-align:left;
+  cursor: pointer;
+}
+.App-card-body{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.1);
+  margin:0 0 20px 0;
+}
+.App-container{
+  margin:20px auto;
+}
+.App-card-header {
+  padding: 20px 0;
+  @include text__align(center);
+  img{
+    border-radius: 50%;
+  }
+}
+.App-card-content {
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+.App-card-content span{
+  background:#56bbd7;
+  padding:10px;
+  border-radius: 30px;
+  color: #fff;
+}
+.App-card-content h2{
+  margin-bottom:20px;
+}
+.App-card-footer{
+  text-align: center;
+  background: #777777;
+  padding: 10px 0;
+}
+.App-card-footer p{
+  margin: 0;
+  color: #fff;
+}
+.App-card-footer p i{
+  padding-right:10px;
+}
+.App-card-content span .glyphicon-envelope:before{
+  position:relative;
+  top:2px;
+}
+.App-card-content span i{
+  padding-right: 8px;
+}
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+.header__full__width{
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15rem 0;
+}
+
+.navbar{
+  padding: .5rem 1rem;
+}
+
+.feature__title__h1{
+  @include text__align(center);
+  @include font__proxima(72px,$primary__white,inherit,0.97,$primary__default__bold,normal);
+  @include font__styles(normal,normal);
+}
+.feature__tag__line{
+  @include text__align(center);
+  @include font__proxima(26px,$primary__white,inherit,1.12,$primary__default__smbd,0.5px);
+  @include font__styles(normal,normal);
+  text-shadow: 0 1px 12px #333;
+
+}
+.nav{
+  li{
+    a.nav-link{
+      @include font__proxima(14px,$primary__white,normal,2.43,$primary__default__medium,normal);
+      @include font__styles(normal,normal);
+      @include text__transform(uppercase);
+    }
+  }
+}
+.nav>li>a:focus, .nav>li>a:hover{
+  background: transparent;
+  text-decoration: underline;
+  outline: none;
+}
+
+.fixed-navigation{
+  background-color: #333;
+}
+
+.page__content__features{
+  @include padding(84px 0 170px);
+  background: $primary__dark__blue;
+  .page__content__feature__title__caption{
+    @include font__proxima(54px,$primary__white,inherit,1.04,$primary__default__smbd,normal);
+    @include font__styles(normal,normal);
+    @include text__align(center);
+    @include text__transform(uppercase);
+  }
+  .page__content__feature__tag__line{
+    @include font__proxima(15px,$primary__white,inherit,1.73,$primary__default__reg,normal);
+    @include font__styles(normal,normal);
+    @include text__align(center);
+  }
+  .page__content__feature__counter__tag__caption{
+    @include font__proxima(54px,$primary__acid__yellow,inherit,1.15,$primary__default__light,normal);
+    @include font__styles(normal,normal);
+    @include margin(0);
+    @include text__align(center);
+  }
+  .page__content__feature__counter__tag__line{
+    @include font__proxima(16px,$primary__white,normal,1.38,$primary__default__reg,normal);
+    @include font__styles(normal,normal);
+    @include text__align(center);
+  }
+}
+.project__list__item{
+  @include padding(0);
+  @include margin(0);
+  .project__list__item__case__row{
+    widows: calc(100% / 3);
+    overflow: hidden;
+    background-color: transparent;
+    height: 100%;
+    position: relative;
+    width: calc(100% / 3);
+    display: inline-block;
+    .caption{
+      z-index: 5;
+      cursor: pointer;
+      opacity: 1;
+      transition: all 0.45s ease-in-out;
+      .blur{
+        background-color: rgba(255, 255, 255, 0);
+        height: 100%;
+        width: 100%;
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        transition: all 1.3s ease-in-out;
+      }
+      .caption__text{
+        z-index: 10;
+        color: #000000;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        display: inline-block;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        .page__list__projects__grid__item__title{
+          @include font__proxima(40px,$primary__white,inherit,0.95,$primary__default__bold,normal);
+          @include font__styles(normal,normal);
+          @include text__align(center);
+          word-break: break-word;
+          @include text__transform(uppercase);
+          min-height: 50%;
+        }
+      }
+    }
+    &:hover{
+      .blur{
+        background-color: rgba(0, 0, 0, 0.65);
+      }
+    }
+  }
+}
+.page__testimonial__description{
+  @include font__proxima(34px,$primary__dark__blue,300,1.29,$primary__default__light,normal);
+  @include font__styles(normal,normal);
+  @include padding(50px 0 0);
+}
+
+.app__sidebar{
+    top: 0;
+    left: 0;
+    width: 260px;
+    border: none;
+    bottom: 0;
+    z-index: 1;
+    position: fixed;
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    background: #333;
+}
+.wrapper-body{
+  width: calc(100% - 260px);
+  position: relative;
+  transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  max-height: 100%;
+  margin-left: 260px;
+  padding: 50px 30px;
+  height: calc(100vh - 140px);
+}
+
+.admin-logo{
+  @include padding(15px 0 50px);
+}
+
+.app__auth__header{
+  width: calc(100% - 260px);
+  margin-left: 260px;
+  text-align: right;
+  padding: 0 30px;
+  background: #00bcd4b3;
+  .nav li a.nav-link{
+    color: #333;
+  }
+}
+
+.app__auth__footer{
+  background: #333;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 260px);
+  margin-left: 260px;
+    
+}

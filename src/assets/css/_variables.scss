@@ -1,0 +1,221 @@
+$bg-color:red;
+body{
+    background-color: #fff;
+  }
+@mixin height($value) {
+    height: $value;
+}
+
+/*Desktop*/
+
+$primay__body__default__font__size: 22px;
+$primay__body__default__font__font__family:'Proxima Nova W05 Regular';
+$primay__body__default__letter__spaceing:0;
+$primay__body__default__line__height:34px;
+
+
+$secondary__body__default__font__size:16x;
+$secondary__body__default__font__font__family:'Proxima Nova W05 Regular';
+$secondary__body__default__letter__spaceing:0;
+$secondary__body__default__line__height:26px;
+
+
+$ternary__body__default__font__size:15x;
+$ternary__body__default__font__font__family:'Proxima Nova W05 Regular';
+$ternary__body__default__letter__spaceing:0;
+$ternary__body__default__line__height:23px;
+
+/*Font Sizes*/
+$primar__heading__h1:78px;
+$primar__heading__h2:54px;
+$primar__heading__h3:54px;
+$primar__heading__h4:40px;
+$primar__heading__h5:32px;
+$primar__heading__h6:28px;
+$primar__heading__h7:26px;
+$primar__heading__h8:22px;
+
+
+/*Colors*/
+
+$primary__dark__blue:#0C203F;
+$primary__acid__yellow:#d4d222;
+$primary__dark__blue__v:#0c3579;
+$primary__dark__blue__medium:#315B9F;
+$primary__light__blue:#d2d8e3;
+$primary__dark__gray:#3e4249;
+$primary__white:#ffffff;
+$primary__default__black:#000000;
+$primary__investor__color:#091b38;
+
+$secondary__medium__gray:#848a96;
+$secondary__light__gray:#ebedee;
+$secondary__red:#e53842;
+$priamry__body__gray:#f2f2f2;
+$primary__default__gray:#9b9b9b;
+$primary__header__linear__gradient__one:#3d3d3da6;
+$primary__header__linear__gradient__two:#e5e5e500;
+$primary__nav__shadow:rgba(0, 0, 0, 0.16);
+$primary__content__bar__shadow:rgba(0, 0, 0, 0.2);
+$primary__card__header:#d2d8e3;
+$primary__card__body:rgba(0, 0, 0, 0.1);
+$primary__panel__color:rgba(0,0,0,.05);
+$primary__blur__color:rgba(0,0,0,0.65);
+$primary__blur__color__link:rgba(0, 0, 0, 0.85);
+$primary__blur__bg__color:rgba(255,255,255,0);
+$primary__body__bg__color:#00000091;
+$primary__border__color:#979797;
+
+
+/*Font Family*/
+$primary__default__bold:'Poppins-Bold';
+$primary__default__light:'Poppins-Light';
+$primary__default__reg:'Poppins-Regular';
+$primary__default__smbd:'Poppins-SemiBold';
+$primary__default__medium:'Poppins-Medium';
+
+$primary__font__style:normal;
+$primary__font-stretch:normal;
+
+/*text transform*/
+$primary__text__capitalize:capitalize;
+$primary__text__lowercase:capitalize;
+$primary__text__uppercase:uppercase;
+
+/*font weights*/
+$priamry__font__weight:normal;
+$priamry__font__bold:bold;
+$priamry__font__bolder:bolder;
+$priamry__font__lighter:lighter;
+$priamry__font__intial:initial;
+$priamry__font__inherit:inherit;
+
+$primary__background__repeat:no-repeat;
+$primary__background__size:cover;
+$primary__background__attchment:fixed;
+
+/*Font Weight*/
+@mixin font__weight__number($property) {
+    font-weight: $property;
+}
+
+/*letter Spaceing*/
+@mixin letter__spaceing($spaceing) {
+    letter-spacing: $spaceing;
+}
+
+/*Line Height*/
+@mixin line__height($height) {
+    line-height: $height;
+}
+
+/*Font Size*/
+@mixin font__size($size) {
+    font-size: $size;
+}
+
+/*Text Align*/
+@mixin text__align($align) {
+    text-align: $align;
+}
+
+/*Padding*/
+@mixin padding($values...) {    
+    @each $var in $values {
+        padding: #{$var};
+    }
+}
+
+/*Margins*/
+@mixin margin($values...) {    
+    @each $var in $values {
+        margin: #{$var};
+    }
+}
+
+/*Float*/
+@mixin float($property) {
+    float: $property;
+}
+
+/*Display*/
+@mixin display($property) {
+    display: $property;
+}
+
+/*left*/
+@mixin left($left) {
+    left: $left;
+}
+
+/*right*/
+@mixin right($right) {
+    right:$right;
+}
+
+/*Center Block*/
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+/*sudo*/
+@mixin pseudo($display: false, $pos: false, $content: false){
+    @if $content{content: $content;}
+    @if $display{display: $display};
+    @if $pos {position: $pos};
+}
+
+/*Font Family*/
+@mixin font__proxima($size: false, $colour: false, $weight: false,  $lh: false,$family:false,$ls:false) {
+    @if $family {font-family: $family;}
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+    @if $ls {letter-spacing:$ls;}
+}
+
+/*Text Decoration*/
+@mixin text__decoration($decoration) {
+    text-decoration: $decoration;
+}
+
+/*Text Transform*/
+@mixin text__transform($transform) {
+    text-transform: $transform;
+}
+
+/*position*/
+@mixin position($position:false,$top:false) {
+    @if $position {position: $position;}
+    @if $top {top:$top;}
+}
+
+/*Font styles & Strech*/
+@mixin font__styles($font-style:false,$font-strech:false) {
+    @if $font-style {font-style: $font-style;}
+    @if $font-strech {font-stretch: $font-strech;}
+}
+
+@mixin  font__family($font__family) {
+    font-family: $font__family;
+}
+
+@mixin pull__left__class($left) {
+    left:$left;
+}
+
+@mixin padding-l($padding-left) {
+    padding-left:$padding-left;
+}
+
+@mixin  color($color) {
+    color:$color;
+}
+
+@mixin margin-bottom($value) {
+    margin-bottom: $value;
+}

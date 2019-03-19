@@ -1,0 +1,74 @@
+@import './variables';
+
+:focus{
+    outline: none;
+}
+.page__default__button__primary{
+    @include font__proxima(14px,$primary__dark__blue,normal,1.71,$primary__default__medium,0.5px);
+    @include font__styles(normal,normal);
+    @include padding(10px 85px);
+    transition: all 0.3s ease-in-out;
+    border-style: none;
+    background: $primary__acid__yellow;
+    @include text__transform(uppercase);
+    border-radius: 4px;
+    &:before{
+        content: url('./assets/img/dark-arrow.svg');
+        position: relative;
+        left: -8px;
+        top: 2px;
+    }
+}
+.page__primary_default_txt__link{
+    @include font__proxima(14px,$primary__white,normal,1.71,$primary__default__medium,0.5px);
+    @include font__styles(normal,normal);
+    transition: all 0.3s ease-in-out;
+    @include text__transform(uppercase);
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.85);
+    &:before{
+        content: url('./assets/img/arrow-right-white.svg');
+        position: relative;
+        right: 6px;
+        top: 2px;
+    }
+    &:hover{
+        color: $primary__white;
+        &:before{
+            right: 12px;
+            transition: 0.3s all ease-in-out;
+        }
+    }
+}
+.m-t__80{
+    margin-top: -80px;
+}
+.m-b-1{
+    @include margin-bottom(10px);
+}
+.m-b-2{
+    @include margin-bottom(20px);
+}
+.m-b-3{
+    @include margin-bottom(30px);
+}
+.m-b-4{
+    @include margin-bottom(40px);
+}
+.m-b-5{
+    @include margin-bottom(50px);
+}
+.m-b-6{
+    @include margin-bottom(60px);
+}
+.m-b-7{
+    @include margin-bottom(70px);
+}
+.m-b-8{
+    @include margin-bottom(80px);
+}
+.m-b-9{
+    @include margin-bottom(90px);
+}
+.m-b-10{
+    @include margin-bottom(100px);
+}
